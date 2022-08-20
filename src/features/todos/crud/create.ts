@@ -8,7 +8,7 @@ export const createTodo = (todo: TodoInput): Todo=> {
     title: todo.title,
     body: todo.body,
     status: todo.status ?? 'waiting',
-    createdAt: todo.createdAt ?? getCurrentDateTime(),
+    createdAt: todo.createdAt || getCurrentDateTime(),
     updatedAt: todo.updatedAt,
     deletedAt: todo.deletedAt,
   };
